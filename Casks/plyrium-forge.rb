@@ -1,6 +1,6 @@
 cask "plyrium-forge" do
-  version "1.3.14"
-  sha256 "c45c8ce03d8c854745e46f1443171b1c70547692c46c8fd97331ba1fa65d264c"
+  version "1.4.0"
+  sha256 "36913400279be9799b759c76e0c469a9ff4a7c144886475c325a7b3ad6e06e87"
 
   url "https://github.com/mordiaky/plyrium-forge-releases/releases/download/v#{version}/Plyrium-Forge-Mac-arm64.zip"
   name "Plyrium Forge"
