@@ -1,6 +1,6 @@
 cask "plyrium-echo" do
-  version "1.0.13"
-  sha256 "92c5d6371fb7280029256164fa7fc39a62c06f6078bb9b1520f8286a96d1a975"
+  version "1.0.14"
+  sha256 "8c44eea21098edb4fc5e48a6b5a32e2a3f17a187a039d4adc46da7e3a0682c45"
 
   url "https://github.com/mordiaky/plyrium-echo-releases/releases/download/v#{version}/Plyrium-Echo-macOS.zip"
   name "Plyrium Echo"
@@ -15,8 +15,8 @@ cask "plyrium-echo" do
   depends_on macos: ">= :big_sur"
   depends_on arch: :arm64
 
-  artifact "Plyrium Echo", target: "#{appdir}/Plyrium Echo"
-  binary "#{appdir}/Plyrium Echo/Plyrium Echo", target: "plyrium-echo"
+  app "Plyrium Echo.app"
+  binary "#{appdir}/Plyrium Echo.app/Contents/MacOS/Plyrium Echo", target: "plyrium-echo"
 
   zap trash: [
     "~/Library/Application Support/Plyrium Echo",
@@ -26,7 +26,6 @@ cask "plyrium-echo" do
     "~/Library/Saved Application State/com.plyrium.echo.savedState",
   ]
 
-  # Echo's current macOS artifact is an unsigned PyInstaller one-folder build,
-  # not a .app bundle. Installing through Homebrew avoids the direct-download
-  # quarantine flow; users can run `plyrium-echo` after install.
+  # Echo ships as a PyInstaller .app bundle. Installing through Homebrew avoids
+  # the direct-download quarantine flow; users can run `plyrium-echo` after install.
 end
