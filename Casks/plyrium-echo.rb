@@ -1,6 +1,6 @@
 cask "plyrium-echo" do
-  version "1.0.17"
-  sha256 "ab83651b7aebbc8fa91b2b3ec590f47fc5a445caa15af4e8d8fe025705bde3f8"
+  version "1.0.18"
+  sha256 "2e97eff7792c8f81e6b8d3209b6c3959ba7a5b19cf814f4cbdecaa468dc8916d"
 
   url "https://github.com/mordiaky/plyrium-echo-releases/releases/download/v#{version}/Plyrium-Echo-macOS.zip"
   name "Plyrium Echo"
